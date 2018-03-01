@@ -4,12 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha",
+    "unit": "./node_modules/.bin/mocha test 2_mocha-chai/1_unit_tests/test/",
+    "integration": "./node_modules/.bin/mocha test 2_mocha-chai/2_integration_tests/test/",
+    "unit-coverage": "nyc ./node_modules/.bin/mocha test 2_mocha-chai/1_unit_tests/test/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^22.3.0"
+    "jest": "^22.3.0",
+    "chai": "^4.1.2",
+    "express": "^4.16.2",
+    "mocha": "^5.0.1",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "nyc": "^11.4.1"
   }
 }
